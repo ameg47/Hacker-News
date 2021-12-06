@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import title from "./Assets/hacker-news.png";
 import All from './Components/AllNews';
+import Favorites from './Components/Favs';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       </div>
       <div>
         {render==="All" ? <All/> : null}
+        {render==="My faves" ? <Favorites/> : null}
       </div>
     </div>
   );
