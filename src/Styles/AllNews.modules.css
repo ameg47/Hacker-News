@@ -41,8 +41,9 @@
 }
 
 .error{
+    padding-left:15px;
     font-size: 30px;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
     display: flex;
     justify-content: center;
     font-weight: 500;

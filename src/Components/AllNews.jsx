@@ -29,7 +29,7 @@ export default function All (){
         }
         catch(e){
             console.log(e)
-            setError("Failed to get news. Please reload the website.")
+            setError("Failed to load the news. Please reload the website.")
         }
     }
     
