@@ -10,6 +10,7 @@ export default function All (){
     const [data, setData]=useState()
     const [page, setPage]=useState(1)
     const [category, setCategory]= useState("angular")
+    const [error, setError]= useState()
 
     useEffect(() => {
         getData(category,page)
@@ -28,6 +29,7 @@ export default function All (){
         }
         catch(e){
             console.log(e)
+            setError("Failed to get news. Please reload the website.")
         }
     }
     
@@ -69,7 +71,8 @@ export default function All (){
         {props.data.label}
     </Option>
     );
-
+    
+    
     return(
         <div>
             <div >
@@ -86,6 +89,7 @@ export default function All (){
                     className={"select"}
                 />
             </div>
+            {error ? <p className={"error"}>{error}</p>:
             <div>
                 <ul className={"newslist"}>
                     {data ? data.map(elem=>{
@@ -99,7 +103,7 @@ export default function All (){
                         else return null
                     }): <p className={"load"}>Loading...</p>}
                 </ul>
-            </div>
+            </div>}
             <button className={"bttnload"} onClick={more}>
                 Load more news
             </button>

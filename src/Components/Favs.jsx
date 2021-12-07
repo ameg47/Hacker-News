@@ -17,7 +17,7 @@ export default function Favorites (){
     },[])
 
     return(
-        <div>
+        <div className={"favscont"}>
              <ul className={"newslist"}>
                 {data.length ? data.map(elem=>{
                     if(elem.author && elem.created_at && elem.story_title && elem.story_url){
