@@ -18,4 +18,6 @@ You will also see any lint errors in the console.
 
 ## Preview
 
+<img align="left" width= "400px" src="https://raw.githubusercontent.com/ameg47/ameg47/master/images/Home.jpeg" />
+
 
