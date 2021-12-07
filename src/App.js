@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './App.css';
+import './Styles/App.modules.css';
 import title from "./Assets/hacker-news.png";
 import All from './Components/AllNews';
 import Favorites from './Components/Favs';
@@ -19,12 +19,12 @@ function App() {
   
   return (
     <div className="App">
-      <div>
-        <img src={title} alt="error"/>
+      <div className={"header"}>
+        <img className={"imgheader"} src={title} alt="error"/>
       </div>
-      <div>
-        <button onClick={handleClick} value="All">All</button>
-        <button onClick={handleClick} value="My faves">My faves</button>
+      <div className={"bttncontainer"}>
+        <button className={render==="All" ? "bttnsactive": "bttns"} onClick={handleClick} value="All">All</button>
+        <button className={render==="My faves" ? "bttnsactive": "bttns"} onClick={handleClick} value="My faves">My faves</button>
       </div>
       <div>
         {render==="All" ? <All/> : null}

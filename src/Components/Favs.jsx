@@ -1,25 +1,25 @@
 import React, {useEffect, useState} from "react";
 import New from "./New";
+import '../Styles/AllNews.modules.css';
 
 export default function Favorites (){
-    const [data, setData]=useState()
+    const [data, setData]=useState([])
 
     useEffect(()=>{
         const favStored= JSON.parse(localStorage.getItem("favorites"))
         var favorites= []
+        if(favStored){
         for(let i=0; i<favStored.length;i++){
             const favorite= JSON.parse(localStorage.getItem(favStored[i]))
             favorites.push(favorite)
-        }
+        }}
         setData(favorites)
     },[])
-    
-    
 
     return(
         <div>
-             <ul>
-                {data ? data.map(elem=>{
+             <ul className={"newslist"}>
+                {data.length ? data.map(elem=>{
                     if(elem.author && elem.created_at && elem.story_title && elem.story_url){
                         return (
                             <li key={elem.created_at}>
@@ -28,7 +28,7 @@ export default function Favorites (){
                             </li>)
                     }
                     else return null
-                }): <p>No favorites saved</p>}
+                }): <p className={"nofavs"}>No favorites saved</p>}
             </ul>
         </div>
     )

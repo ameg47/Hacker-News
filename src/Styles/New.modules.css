@@ -1,0 +1,77 @@
+.rowcont{
+    display: flex;
+    margin-bottom: 5%;
+    margin-left: 2%;
+    height: 100px;
+    opacity: 0.8;
+    border-radius: 6px;
+    border: solid 1px #979797;
+    background-color: #fff;
+    opacity: 0.8;
+}
+.rowcont:hover{
+    opacity: 1;
+}
+
+.like{
+    width:10%;
+    display:flex;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    padding:5%;
+    background-color: #fcfcfc;
+}
+
+.info{
+    width:90%;
+    padding:0 10px 0 20px;
+    cursor: pointer;
+}
+
+.timecont{
+    display: flex;
+    flex-direction: row;
+    padding-top: 3px;
+}
+.time{
+    margin-left: 5px;
+    font-size: 11px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #767676;
+}
+
+.icontimer{
+    object-fit: contain;
+}
+
+.title{
+    font-size: 80%;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: 0.25px;
+    color: #6b6b6b;
+    margin-top: 0;
+}
+
+.heart{
+    height: 50%;
+}
+
+@media only screen and (min-width: 600px) {
+    .heart{
+        object-fit: contain;
+        cursor: pointer;
+        height: initial;
+        width: initial 
+    }
+    .like{
+        padding:5%;
+    }
+}

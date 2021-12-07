@@ -2,7 +2,8 @@ import React, {useEffect, useState} from "react";
 import moment from "moment";
 import heartAdd from "../Assets/iconmonstr-favorite-2_4@3x.png"
 import heartAdded from "../Assets/iconmonstr-favorite-3@3x.png"
-
+import icontimer from "../Assets/iconmonstr-time-2.png"
+import '../Styles/New.modules.css';
 
 export default function New ({id, author, created_at, story_title, story_url}){
     const [isFavorite, setFavorite] = useState()
@@ -38,16 +39,19 @@ export default function New ({id, author, created_at, story_title, story_url}){
     }
 
     return(
-        <div>
-            <div onClick={handleRedirects}>
-                <p>{hour} by {author}</p>
-                <h3>{story_title}</h3>
+        <div className={"rowcont"}>
+            <div className={"info"} onClick={handleRedirects}>
+                <div className={"timecont"}>
+                    <img className={"icontimer"} src={icontimer} alt=""/>
+                    <p className={"time"}>{hour} by {author}</p>
+                </div>
+                <p className={"title"}>{story_title}</p>
             </div>
-            <div>
+            <div className={"like"}>
             {isFavorite ? 
-                <img src={heartAdded} alt="" onClick={handleClickFav}></img>
+                <img className={"heart"} src={heartAdded} alt="" onClick={handleClickFav}></img>
                     : 
-                <img src={heartAdd} alt="" onClick={handleClickFav}></img>}
+                <img className={"heart"} src={heartAdd} alt="" onClick={handleClickFav}></img>}
             </div>
         </div>
     )
