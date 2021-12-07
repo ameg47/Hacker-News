@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import moment from "moment";
-import heartAdd from "../Assets/iconmonstr-favorite-2_4@3x.png"
-import heartAdded from "../Assets/iconmonstr-favorite-3@3x.png"
+import heartAdd from "../Assets/iconmonstr-favorite-2_4.png"
+import heartAdded from "../Assets/iconmonstr-favorite-3.png"
 import icontimer from "../Assets/iconmonstr-time-2.png"
 import '../Styles/New.modules.css';
 
@@ -16,6 +16,7 @@ export default function New ({id, author, created_at, story_title, story_url}){
         if(stored){
             setFavorite(true)
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
     const handleRedirects= ()=>{

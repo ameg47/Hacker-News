@@ -17,6 +17,7 @@ export default function All (){
         if(catStored){
             setCategory(catStored)
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
     async function getData(category){
@@ -36,9 +37,9 @@ export default function All (){
         getData(category, page)
     }
 
-    function getMore(category, page){
+    async function getMore(category, page){
         try{
-            fetch(`https://hn.algolia.com/api/v1/search_by_date?query=${category}&page=${page}`)
+            await fetch(`https://hn.algolia.com/api/v1/search_by_date?query=${category}&page=${page}`)
                 .then(r=>r.json())
                 .then(json=>(setData(data=>[...data, ...json.hits])))
         }

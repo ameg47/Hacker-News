@@ -16,8 +16,13 @@ ul {
   list-style-type: none;
 }
 
+html, body{
+  overflow-x: hidden;
+}
+
 @media only screen and (min-width: 600px) {
   html{
     width: 100%;
+    
   }
 }

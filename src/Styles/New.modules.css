@@ -61,16 +61,13 @@
 }
 
 .heart{
-    height: 50%;
+    object-fit: contain;
+    cursor: pointer;
+    height: initial;
+    width: initial 
 }
 
 @media only screen and (min-width: 600px) {
-    .heart{
-        object-fit: contain;
-        cursor: pointer;
-        height: initial;
-        width: initial 
-    }
     .like{
         padding:5%;
     }
